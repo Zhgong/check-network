@@ -1,0 +1,3 @@
+#!/bin/bash
+echo stopping and prune ...
+docker stop check-network && docker container prune -f
