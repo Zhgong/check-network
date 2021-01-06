@@ -5,4 +5,5 @@ echo $REL_DIR
 DIR=$(realpath $REL_DIR)
 docker run -d --env-file .env \
 --device=/dev/ttyUSB0 \
+--restart=always \
 --name check-network check-network:latest

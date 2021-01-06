@@ -21,7 +21,7 @@ function send_message() {
 	# curl -X POST -H "Content-Type: application/json" -u "${MESSAGE_TOKEN}:" -d "{\"message\":\"[Mailbox] [$1]\"}" -k https://${SERVER_IP}:${PORT}/api/v1/send
 	curl -X POST \
      -H 'Content-Type: application/json' \
-     -d "{\"chat_id\": \"$CHAT_ID\", \"text\": \"【服务启动】\"" \
+     -d "{\"chat_id\": \"$CHAT_ID\", \"text\": \"$(date)【服务启动】\"" \
      https://api.telegram.org/bot$TOKEN/sendMessage
 }
 
